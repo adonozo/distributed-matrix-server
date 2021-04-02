@@ -29,6 +29,7 @@ namespace GrpcService
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<MultiplicationService>();
+                endpoints.MapGrpcService<MultiThreadMultiplicationService>();
                 endpoints.MapGrpcService<AddService>();
 
                 endpoints.MapGet("/",
