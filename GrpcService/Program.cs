@@ -25,7 +25,7 @@ namespace GrpcService
                 {
                     webBuilder.ConfigureKestrel(options =>
                     {
-                        options.ListenLocalhost(port, listenOptions => 
+                        options.ListenAnyIP(port, listenOptions => 
                             listenOptions.Protocols = HttpProtocols.Http2);
                     });
                     webBuilder.UseStartup<Startup>();
