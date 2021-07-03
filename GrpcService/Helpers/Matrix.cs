@@ -4,8 +4,17 @@ using System.Threading.Tasks;
 
 namespace GrpcService.Helpers
 {
+    /// <summary>
+    /// The Matrix class is a helper for matrices addition and multiplication.
+    /// </summary>
     public static class Matrix
     {
+        /// <summary>
+        /// Add operation between two matrices of the same size.
+        /// </summary>
+        /// <param name="matrixA">An <see cref="int"/> matrix with a power of 2 size.</param>
+        /// <param name="matrixB">An <see cref="int"/> matrix with a power of 2 size.</param>
+        /// <returns>The resulting <see cref="int"/> matrix</returns>
         public static int[][] AddMatrices(IReadOnlyList<int[]> matrixA, IReadOnlyList<int[]> matrixB)
         {
             var size = matrixA.Count;
@@ -22,6 +31,12 @@ namespace GrpcService.Helpers
             return matrixC;
         }
 
+        /// <summary>
+        /// Adds two matrices of the same size using a <see cref="Parallel"/> method for multithreading.
+        /// </summary>
+        /// <param name="matrixA">An <see cref="int"/> matrix with a power of 2 size.</param>
+        /// <param name="matrixB">An <see cref="int"/> matrix with a power of 2 size.</param>
+        /// <returns>The resulting <see cref="int"/> matrix</returns>
         public static int[][] AddMatricesMultiThread(IReadOnlyList<int[]> matrixA, IReadOnlyList<int[]> matrixB)
         {
             var size = matrixA.Count;
@@ -38,6 +53,9 @@ namespace GrpcService.Helpers
             return matrixC;
         }
         
+        /// <summary>
+        /// Matrix multiplication using a divide and conquer algorithm.
+        /// </summary>
         public static int[][] MultiplyMatrix(IReadOnlyList<int[]> matrixA, IReadOnlyList<int[]> matrixB, 
             int rowA, int colA, int rowB, int colB, int size)
         {

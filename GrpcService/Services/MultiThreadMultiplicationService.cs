@@ -7,6 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace GrpcService.Services
 {
+    /// <summary>
+    /// The Multi-thread Multiplication Service. Uses the divide and conquer algorithm. Handles square matrices of any power of 2 size.
+    /// </summary>
     public class MultiThreadMultiplicationService : MultiThreadMultiplication.MultiThreadMultiplicationBase
     {
         private readonly ILogger<MultiThreadMultiplicationService> logger;

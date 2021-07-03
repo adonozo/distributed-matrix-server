@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace GrpcService.Services
 {
     /// <summary>
-    /// The Multiplication Service. Uses the divide and conquer algorithm. Handles square matrices of any size.
+    /// The Multiplication Service. Uses the divide and conquer algorithm. Handles square matrices of any power of 2 size.
     /// </summary>
     public class MultiplicationService : Multiplication.MultiplicationBase
     {
